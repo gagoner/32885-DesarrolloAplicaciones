@@ -11,17 +11,14 @@ export default TaskInputField = (props) => {
     }
 
     return (
-        <KeyboardAvoidingView 
-        behavior={Platform.OS === "ios" ? "padding" : "height"}
-        style={styles.container}
-      >
-        <TextInput style={styles.inputField} value={task} onChangeText={text => setTask(text)} placeholder={'Write a task'} placeholderTextColor={'#fff'}/>
-        <TouchableOpacity onPress={() => handleAddTask(task)}>
-          <View style={styles.button}>
-              <MaterialIcons name="keyboard-arrow-up" size={24} color="black" />
-          </View>
-        </TouchableOpacity>
-      </KeyboardAvoidingView>
+        <KeyboardAvoidingView behavior={Platform.OS === "ios" ? "padding" : "height"} style={styles.container}>
+            <TextInput style={styles.inputField} value={task} onChangeText={text => setTask(text)} placeholder={'Write a task'} placeholderTextColor={'#fff'}/>
+            <TouchableOpacity onPress={() => handleAddTask(task)}>
+                <View style={styles.button}>
+                    <MaterialIcons name="keyboard-arrow-up" size={24} color="black" />
+                </View>
+            </TouchableOpacity>
+        </KeyboardAvoidingView>
     );
 }
 

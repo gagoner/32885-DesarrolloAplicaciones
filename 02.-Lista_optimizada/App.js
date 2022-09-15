@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import { Keyboard, ScrollView, StyleSheet, Text, View } from 'react-native';
+import { Keyboard, ScrollView, StyleSheet, Text, View, Alert } from 'react-native';
 import TaskInputField from './components/TaskInputField';
 import TaskItem from './components/TaskItem';
 
@@ -8,18 +8,30 @@ export default function App() {
   const [tasks, setTasks] = useState([]);
 
   const addTask = (task) => {
-    if (task == null) return;
+    if (task == null) return Alert.alert("Ooops!", "Please, enter a task");
     setTasks([...tasks, task]);
     Keyboard.dismiss();
   }
 
   const deleteTask = (deleteIndex) => {
-    setTasks(tasks.filter((value, index) => index != deleteIndex));
+    Alert.alert("Delete Item", "Are you sure you want to delete this item?", [
+      {
+        text: "Cancel",
+      },
+      {
+        text: "Yes",
+        onPress: () => {
+          setTasks(tasks.filter((value, index) => index != deleteIndex));
+        },
+      },
+    ]);
   }
 
   return (
     <View style={styles.container}>
-        <Text style={styles.heading}>TODO LIST</Text>
+        <Text style={styles.heading}>
+          TODO LIST
+        </Text>
       <ScrollView style={styles.scrollView}>
         {
         tasks.map((task, index) => {
