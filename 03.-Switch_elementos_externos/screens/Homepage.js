@@ -112,7 +112,7 @@ export default function Homepage() {
             <TextInput
                 style={styles.textInput}
                 placeholder="New Task"
-                placeholderTextColor={COLORS.primary}
+                placeholderTextColor={COLORS.text}
                 onChangeText={text => setValue(text)}
                 value={value} />
             <TouchableOpacity

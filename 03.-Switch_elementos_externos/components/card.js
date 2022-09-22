@@ -17,7 +17,7 @@ const styles = StyleSheet.create({
     },
     text: {
         ...FONTS.h2_semiBold,
-        color: COLORS.primary
+        color: COLORS.text
     },
     checkbox: {
         marginRight: 15
