@@ -2,7 +2,7 @@ const COLORS = {
     primary: "#1E1A3C",
     secondary: "#3E3364",
     accent: "#FFFFFF",
-    text: "#2596BE"
+    text: "#2089DC"
 }
 
 const SIZES = {

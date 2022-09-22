@@ -28,13 +28,13 @@ const styles = StyleSheet.create({
         height: 42,
         paddingLeft: 15,
         width: "90%",
-        color: COLORS.primary,
+        color: COLORS.accent,
         marginRight: 15,
         ...FONTS.h2_semiBold,
     },
     btn: {
         ...SHADOW,
-        backgroundColor: COLORS.accent,
+        backgroundColor: COLORS.text,
         height: 42,
         width: 42,
         borderRadius: 100,
@@ -60,7 +60,7 @@ export default function Homepage() {
             })
             setValue("")
         } else {
-            alert("Please type in something!")
+            Alert.alert("Ooops!", "Please enter a task!")
         }
     }
 
@@ -101,7 +101,7 @@ export default function Homepage() {
 
 
     return <View style={styles.container}>
-        <Text style={{ ...FONTS.h1_semiBold, color: COLORS.accent, marginBottom: 15 }}>TODO LIST</Text>
+        <Text style={{ ...FONTS.h1_semiBold, color: COLORS.text, marginBottom: 15 }}>TODO LIST</Text>
         <FlatList style={{ flex: 1 }}
             data={list}
             renderItem={({ item, index }) => <Card data={item} index={index} setIsSelected={setIsSelected} deleteItem={deleteItem} />}
@@ -112,14 +112,14 @@ export default function Homepage() {
             <TextInput
                 style={styles.textInput}
                 placeholder="New Task"
-                placeholderTextColor={COLORS.text}
+                placeholderTextColor={COLORS.accent}
                 onChangeText={text => setValue(text)}
                 value={value} />
             <TouchableOpacity
                 style={styles.btn}
                 onPress={() => addText(value)}>
-                <Text style={{ fontSize: 34, color: COLORS.secondary }}>
-                    <MaterialIcons name="keyboard-arrow-up" size={24} color="black" />
+                <Text style={{ fontSize: 34, color: COLORS.secpondary }}>
+                    <MaterialIcons name="keyboard-arrow-up" size={24} color={COLORS.secondary} />
                 </Text>
             </TouchableOpacity>
         </View>

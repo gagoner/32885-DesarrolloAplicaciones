@@ -17,10 +17,7 @@ const styles = StyleSheet.create({
     },
     text: {
         ...FONTS.h2_semiBold,
-        color: COLORS.text
-    },
-    checkbox: {
-        marginRight: 15
+        color: COLORS.accent
     }
 })
 
@@ -28,7 +25,7 @@ export default function Card(props) {
 
     
     return <Pressable style={styles.view} onLongPress={() => props.deleteItem(props.index)}>
-        <CheckBox style={styles.checkbox}
+        <CheckBox
             checked={props.data.isSelected}
             onPress={(value) => props.setIsSelected(props.index, !props.data.isSelected)}
         />
