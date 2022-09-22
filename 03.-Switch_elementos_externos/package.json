@@ -9,16 +9,36 @@
     "web": "expo start --web"
   },
   "dependencies": {
+    "@expo/webpack-config": "^0.17.0",
+    "@react-native-community/checkbox": "^0.5.12",
     "expo": "~46.0.9",
+    "expo-app-loading": "^2.1.0",
+    "expo-font": "^10.2.0",
     "expo-status-bar": "~1.4.0",
     "react": "18.0.0",
-    "react-native": "0.69.5",
-    "react-native-web": "~0.18.7",
     "react-dom": "18.0.0",
-    "@expo/webpack-config": "^0.17.0"
+    "react-native": "0.69.5",
+    "react-native-web": "~0.18.7"
   },
   "devDependencies": {
     "@babel/core": "^7.12.9"
   },
-  "private": true
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gagoner/32885-DesarrolloAplicaciones.git#main"
+  },
+  "keywords": [
+    "screen",
+    "switch",
+    "constant",
+    "fonts"
+  ],
+  "author": "gagoner",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gagoner/32885-DesarrolloAplicaciones/issues"
+  },
+  "homepage": "https://github.com/gagoner/32885-DesarrolloAplicaciones/tree/main#readme",
+  "description": ""
 }

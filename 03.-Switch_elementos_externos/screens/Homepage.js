@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { View, Text, StyleSheet, StatusBar, Platform, TextInput, TouchableOpacity, FlatList, Alert } from "react-native"
 import { Card } from "../components"
 import { COLORS, SIZES, FONTS, SHADOW } from "../constants"
+import { MaterialIcons } from '@expo/vector-icons';
 
 const styles = StyleSheet.create({
     container: {
@@ -100,7 +101,7 @@ export default function Homepage() {
 
 
     return <View style={styles.container}>
-        <Text style={{ ...FONTS.h1_semiBold, color: COLORS.secondary, marginBottom: 15 }}>What need to be done.</Text>
+        <Text style={{ ...FONTS.h1_semiBold, color: COLORS.secondary, marginBottom: 15 }}>TODO LIST</Text>
         <FlatList style={{ flex: 1 }}
             data={list}
             renderItem={({ item, index }) => <Card data={item} index={index} setIsSelected={setIsSelected} deleteItem={deleteItem} />}
@@ -117,7 +118,9 @@ export default function Homepage() {
             <TouchableOpacity
                 style={styles.btn}
                 onPress={() => addText(value)}>
-                <Text style={{ fontSize: 34, color: COLORS.secondary }}>+</Text>
+                <Text style={{ fontSize: 34, color: COLORS.secondary }}>
+                    <MaterialIcons name="keyboard-arrow-up" size={24} color="black" />
+                </Text>
             </TouchableOpacity>
         </View>
     </View>

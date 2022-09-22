@@ -1,23 +1,32 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import React, {useState} from 'react';
+import { Keyboard, ScrollView, StyleSheet, Text, View, Alert } from 'react-native';
+import TaskInputField from './components/TaskInputField';
+import TaskItem from './components/TaskItem';
 
 export default function App() {
-  return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
-  );
-}
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+  const [tasks, setTasks] = useState([]);
+
+  const addTask = (task) => {
+    if (task == null) return Alert.alert("Ooops!", "Please, enter a task");
+    setTasks([...tasks, task]);
+    Keyboard.dismiss();
+  }
+
+  const deleteTask = (deleteIndex) => {
+    Alert.alert("Delete Item", "Are you sure you want to delete this item?", [
+      {
+        text: "Cancel",
+      },
+      {
+        text: "Yes",
+        onPress: () => {
+          setTasks(tasks.filter((value, index) => index != deleteIndex));
+        },
+      },
+    ]);
+  }
+
   return (
     <View style={styles.container}>
         <Text style={styles.heading}>
@@ -35,51 +44,6 @@ const styles = StyleSheet.create({
       }
       </ScrollView>
       <TaskInputField addTask={addTask}/>
-=======
-    setTaskItems([...taskItems, task]);
-    setTask(null);
-  };
-  const handleDeleteTask = (index) => {
-    let itemsCopy = [...taskItems];
-    itemsCopy.splice(index, 1);
-    setTaskItems(itemsCopy);
-  };
-
-
-  return (
-    <View style={styles.container}>
-      <View style={styles.taskWrapper}>
-        <Text style={styles.sectionTitle}>Today's task</Text>
-        <View style={styles.items}>
-          {taskItems.map((item, index) => {
-            return (
-              <TouchableOpacity
-                key={index}
-                onPress={() => handleDeleteTask(index)}
-              >
-                <Task text={item} />
-              </TouchableOpacity>
-            );
-          })}
-        </View>
-      </View>
-      <KeyboardAvoidingView
-        behavor={Platform.OS === "ios" ? "padding" : "height"}
-        style={styles.writeTaskWrapper}
-      >
-        <TextInput
-          style={styles.input}
-          placeholder={"Write your task"}
-          value={task}
-          onChangeText={(text) => setTask(text)}
-        />
-        {/* <TouchableOpacity onPress={() => handleAddTask()}>
-          <View style={styles.addWrapper}>
-            <Text style={styles.addText}>+</Text>
-          </View>
-        </TouchableOpacity> */}
-      </KeyboardAvoidingView>
->>>>>>> 9737b85 (Desafío 3)
     </View>
   );
 }
