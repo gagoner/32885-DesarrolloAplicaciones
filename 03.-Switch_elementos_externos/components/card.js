@@ -1,7 +1,7 @@
 import React from 'react';
-import { View, Text, StyleSheet, Pressable } from "react-native"
-import CheckBox from "@react-native-community/checkbox"
+import { Text, StyleSheet, Pressable } from "react-native"
 import { SIZES, FONTS, COLORS, SHADOW } from "../constants"
+import { CheckBox } from 'react-native-elements'
 
 const styles = StyleSheet.create({
     view: {
