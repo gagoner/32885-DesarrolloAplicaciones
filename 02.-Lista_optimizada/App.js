@@ -1,39 +1,23 @@
-<<<<<<< HEAD
-import React, {useState} from 'react';
-import { Keyboard, ScrollView, StyleSheet, Text, View, Alert } from 'react-native';
-import TaskInputField from './components/TaskInputField';
-import TaskItem from './components/TaskItem';
-=======
-import React, { useState } from "react";
-import { StyleSheet, Text, View, KeyboardAvoidingView, TextInput, TouchableOpacity, Keyboard } from "react-native";
-import Task from "./components/task";
->>>>>>> 9737b85 (Desafío 3)
+import { StatusBar } from 'expo-status-bar';
+import { StyleSheet, Text, View } from 'react-native';
 
 export default function App() {
+  return (
+    <View style={styles.container}>
+      <Text>Open up App.js to start working on your app!</Text>
+      <StatusBar style="auto" />
+    </View>
+  );
+}
 
-  const [tasks, setTasks] = useState([]);
-
-  const addTask = (task) => {
-    if (task == null) return Alert.alert("Ooops!", "Please, enter a task");
-    setTasks([...tasks, task]);
-    Keyboard.dismiss();
-<<<<<<< HEAD
-  }
-
-  const deleteTask = (deleteIndex) => {
-    Alert.alert("Delete Item", "Are you sure you want to delete this item?", [
-      {
-        text: "Cancel",
-      },
-      {
-        text: "Yes",
-        onPress: () => {
-          setTasks(tasks.filter((value, index) => index != deleteIndex));
-        },
-      },
-    ]);
-  }
-
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: '#fff',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+});
   return (
     <View style={styles.container}>
         <Text style={styles.heading}>
