@@ -101,7 +101,7 @@ export default function Homepage() {
 
 
     return <View style={styles.container}>
-        <Text style={{ ...FONTS.h1_semiBold, color: COLORS.secondary, marginBottom: 15 }}>TODO LIST</Text>
+        <Text style={{ ...FONTS.h1_semiBold, color: COLORS.accent, marginBottom: 15 }}>TODO LIST</Text>
         <FlatList style={{ flex: 1 }}
             data={list}
             renderItem={({ item, index }) => <Card data={item} index={index} setIsSelected={setIsSelected} deleteItem={deleteItem} />}

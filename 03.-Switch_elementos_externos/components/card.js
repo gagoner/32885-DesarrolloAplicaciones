@@ -29,8 +29,8 @@ export default function Card(props) {
     
     return <Pressable style={styles.view} onLongPress={() => props.deleteItem(props.index)}>
         <CheckBox style={styles.checkbox}
-            value={props.data.isSelected}
-            onValueChange={(value) => props.setIsSelected(props.index, value)}
+            checked={props.data.isSelected}
+            onPress={(value) => props.setIsSelected(props.index, !props.data.isSelected)}
         />
         <Text style={{...styles.text, textDecorationLine: props.data.isSelected ? "line-through" : "none"}}>{props.data.text}</Text>
     </Pressable>
