@@ -61,7 +61,7 @@ const Products = ({ route, navigation }) => {
                 onChangeText={setInput}
                 keyboardType="default"
                 style={styles.input}
-                placeholder="Buscar producto..."
+                placeholder="Search product..."
               />
             </View>
             <TouchableOpacity onPress={handleErase}>
@@ -77,7 +77,7 @@ const Products = ({ route, navigation }) => {
               />
             ) : (
               <Text style={styles.text}>
-                No hay artículos que coincidan con tu búsqueda
+                No products match your search
               </Text>
             )}
           </View>

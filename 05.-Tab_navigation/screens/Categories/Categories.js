@@ -56,7 +56,7 @@ const Categories = ({ navigation }) => {
             />
           ) : (
             <Text style={styles.text}>
-              No hay categorías que coincidan con tu búsqueda
+              No categories match your search
             </Text>
           )}
         </View>

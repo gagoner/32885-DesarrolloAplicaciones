@@ -25,7 +25,7 @@ const CartStack = () => {
         name="Cart"
         component={Cart}
         options={{
-          title: "Carrito",
+          title: "Cart",
         }}
       />
     </Stack.Navigator>
