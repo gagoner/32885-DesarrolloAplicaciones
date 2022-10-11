@@ -1,20 +1,22 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+
+import { Provider } from 'react-redux';
+import { useFonts } from 'expo-font';
+import AppNavigator from './navigation';
+import store from './store';
 
 export default function App() {
-  return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+
+  const [loaded] = useFonts({
+    AnekRegular: require('./assets/fonts/AnekMalayalam-Regular.ttf'),
+    AnekBold: require('./assets/fonts/AnekMalayalam-Bold.ttf'),
+    AnekThin: require('./assets/fonts/AnekMalayalam-Thin.ttf'),
+  });
+  
+  if (!loaded) return null;
+
+  return(
+    <Provider store={store}>
+      <AppNavigator />
+    </Provider>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
