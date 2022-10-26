@@ -1,13 +1,5 @@
-import { Provider } from 'react-redux'
-import AppNavigator from './src/navigation'
-import { store } from './src/store'
+import Root from "./src";
 
-const App = () => {
-  return (
-    <Provider store={store}>
-      <AppNavigator />
-    </Provider>
-  )
+export default function App() {
+  return <Root />;
 }
-
-export default App

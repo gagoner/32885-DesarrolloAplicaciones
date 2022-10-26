@@ -1,12 +1,10 @@
-import { NavigationContainer } from '@react-navigation/native'
-import PlaceNavigator from './PlaceNavigator'
+import React from "react";
+import { NavigationContainer } from "@react-navigation/native";
 
-const AppNavigator = () => {
-    return (
-        <NavigationContainer>
-            <PlaceNavigator />
-        </NavigationContainer>
-    )
-}
+import PlaceNavigator from "./PlaceNavigator";
 
-export default AppNavigator
+export default () => (
+  <NavigationContainer>
+    <PlaceNavigator />
+  </NavigationContainer>
+);
