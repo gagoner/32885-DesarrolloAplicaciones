@@ -1,0 +1,42 @@
+{
+  "expo": {
+    "name": "ProyectoFinal",
+    "slug": "ProyectoFinal",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#FFFFFF"
+      },
+      "package": "com.gagoner.ProyectoFinal"
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "runtimeVersion": {
+      "policy": "sdkVersion"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "c1c423f9-f0c0-4b94-aebd-72c9d7d13514"
+      }
+    },
+    "updates": {
+      "url": "https://u.expo.dev/c1c423f9-f0c0-4b94-aebd-72c9d7d13514"
+    }
+  }
+}

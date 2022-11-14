@@ -10,6 +10,6 @@ npm-debug.*
 *.orig.*
 web-build/
 ejercicios/
-
+key.js
 # macOS
 .DS_Store
