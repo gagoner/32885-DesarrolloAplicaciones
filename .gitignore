@@ -13,3 +13,4 @@ ejercicios/
 key.js
 # macOS
 .DS_Store
+.vscode

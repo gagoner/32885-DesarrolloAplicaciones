@@ -57,6 +57,7 @@ const ProductDetailScreen = ({ navigation, route }) => {
                 <View style={styles.categoryBrand}>
                     <Text style={styles.categoryBrandText}>{`${category} > ${brand}`}</Text>
                 </View>
+                {console.log(item.imageUri)}
                 <View style={styles.images}>
                     <View style={styles.mainImageContainer}>
                         <Image source={{ uri: item.imageUri ? item.imageUri : `${PRODUCT_IMAGE_URL}${id}-${currentImage}.png` }} style={styles.mainImage} />
@@ -107,7 +108,7 @@ const ProductDetailScreen = ({ navigation, route }) => {
                                 </View>
                             </View>
                             <View style={styles.actionButtons}>
-                                <PrimaryButton title='Finish order' onPress={handleBuy} />
+                                <PrimaryButton title='Order' onPress={handleBuy} />
                             </View>
                         </>
                 }

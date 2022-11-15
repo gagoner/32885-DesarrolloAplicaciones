@@ -7,6 +7,7 @@ class CartItem {
         this.quantity = quantity
         this.imageUri = imageUri
     }
+
 }
 
 export default CartItem

@@ -42,7 +42,7 @@ const AuthScreen = () => {
                     label='Email'
                     helper={''}
                     value={email}
-                    placeholder='test@test.com'
+                    placeholder='name@doamin.tld'
                     onChangeText={setEmail}
                     textContentType='emailAddress'
                     onEndEditing={() => { }}

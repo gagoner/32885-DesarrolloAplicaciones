@@ -1,1 +1,1 @@
-export const PRODUCT_IMAGE_URL = 'https://raw.githubusercontent.com/gagoner/ProyectoFinal/master/assets/img/'
+export const PRODUCT_IMAGE_URL = 'https://raw.githubusercontent.com/gagoner/32885-DesarrolloAplicaciones/main/ProyectoFinal/assets/img/'

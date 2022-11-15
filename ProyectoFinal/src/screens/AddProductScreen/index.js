@@ -8,16 +8,14 @@ import { createProduct } from '../../store/product.slice'
 
 const AddProductScreen = ({ navigation }) => {
 
-    // id, name, brand, category, price, discount, sold, opinions, stars, amountAvailable, freeShipping, availableImages, availableColors, description
-
     const dispatch = useDispatch()
 
     const [showForm, setShowForm] = useState(true)
 
-    const [name, setName] = useState('Smart TV')
+    const [name, setName] = useState('Product name')
     const [price, setPrice] = useState('100000')
     const [amountAvailable, setAmounAvailable] = useState('1')
-    const [description, setDescription] = useState('Smart TV 44 inches LED HD')
+    const [description, setDescription] = useState('Product description')
     const [imageUri, setImageUri] = useState('')
 
     const formCompleted = () => !!(name && price && amountAvailable && description && imageUri)
@@ -89,7 +87,7 @@ const AddProductScreen = ({ navigation }) => {
                             label='Product name'
                             helper={''}
                             value={name}
-                            placeholder='Smart TV'
+                            placeholder='Enter product name'
                             onChangeText={setName}
                             onEndEditing={() => { }}
                         />
